@@ -2,7 +2,7 @@
 https://docs.google.com/spreadsheets/d/1P3RXgZju_2OzZyJaRtu6D3Kx-Eks38X09_zJ8aj2zy8/edit?gid=0#gid=0
 
 ##1.Odd or Even
-1. Using modulus operator
+1.1. Using modulus operator
 class Solution {
     static String oddEven(int n) {
         // code here
@@ -13,7 +13,7 @@ class Solution {
         }
     }
 }
-2. Using bitwise and operator (mind the inner paranthesis)
+1.2. Using bitwise and operator (mind the inner parenthesis)
 class Solution {
     static String oddEven(int n) {
         // code here
@@ -37,7 +37,7 @@ class Solution {
 insert link : https://www.geeksforgeeks.org/find-first-last-digits-number/
 
 ##4.Find reverse of a number
-class Solution
+4.1class Solution
 {
     public long reverse_digit(long n)
     {
@@ -53,7 +53,7 @@ class Solution
     }
 }
 
-using recursion:
+4.2.using recursion:
 class Solution{
     public long reverse_digit(long num,int count)
     {
@@ -66,9 +66,9 @@ class Solution{
         num/=10;
     }
 
-     $ reverse of an array:
+5.reverse of an array:
 ##4 ways: 
-(1)creating a temporary array
+5.1.creating a temporary array
 class Main{
     public static void main(String[] args){
         int[] nums = new int[]{1,2,3,4,5};
@@ -85,7 +85,7 @@ class Main{
     }
 }
 
-(2)using two pointers
+5.2.using two pointers
 class GfG {
     
     // function to reverse an array
@@ -120,7 +120,7 @@ class GfG {
     }
 }
 
-(3)using swapping but iterating only through half of array
+5.3.using swapping but iterating only through half of array
 class Main {
     
     // function to reverse an array
@@ -145,7 +145,7 @@ class Main {
 }
 }
 
-(4) Recursive function using left and right pointer
+5.4.Recursive function using left and right pointer
 import java.util.Arrays;
 
 class Main{
@@ -184,3 +184,21 @@ class Solution
         return((n<10) ? n:(n%10)+Integer.parseInt(Integer.toString(n).substring(0,1)));
     }
 }
+
+public static int firstDigit(int n) 
+    { 
+        // Remove last digit from number 
+        // till only one digit is left 
+        while (n >= 10)  
+            n /= 10; 
+      
+        // return the first digit 
+        return n; 
+    } 
+  
+    // Find the last digit 
+    public static int lastdigit(int n) 
+    { 
+        // return the last digit 
+        return (n % 10); 
+    } 
