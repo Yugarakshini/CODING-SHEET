@@ -1,0 +1,36 @@
+##Link to coding sheet
+https://docs.google.com/spreadsheets/d/1P3RXgZju_2OzZyJaRtu6D3Kx-Eks38X09_zJ8aj2zy8/edit?gid=0#gid=0
+
+##1.Odd or Even
+1. Using modulus operator
+class Solution {
+    static String oddEven(int n) {
+        // code here
+        if(n%2==0){
+            return "even";
+        }else{
+            return "odd";
+        }
+    }
+}
+2. Using bitwise and operator (mind the inner paranthesis)
+class Solution {
+    static String oddEven(int n) {
+        // code here
+        if((n&1)==0){
+            return "even";
+        }else{
+            return "odd";
+        }
+    }
+}
+
+##2.Find last digit of a^b for BIgInteger
+class Solution {
+    static int getLastDigit(String a, String b) {
+        // code here
+        return new BigInteger(a).modPow(new BigInteger(b),BigInteger.TEN).intValue();
+    }
+};
+
+##3.
