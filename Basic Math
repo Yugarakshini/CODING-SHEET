@@ -33,4 +33,154 @@ class Solution {
     }
 };
 
-##3.
+##3.Find nod
+insert link : https://www.geeksforgeeks.org/find-first-last-digits-number/
+
+##4.Find reverse of a number
+class Solution
+{
+    public long reverse_digit(long n)
+    {
+        long rev = 0,nod;
+        long num = n;
+        while(num!=0)
+        {
+            nod = num%10;
+            rev = rev*10 + nod;
+            num/=10;
+        }
+        return rev;
+    }
+}
+
+using recursion:
+class Solution{
+    public long reverse_digit(long num,int count)
+    {
+        if(num == 0)
+        {
+            return result;
+        }
+        result = 0;
+        result = (result * 10) + (num%10);
+        num/=10;
+    }
+
+     $ reverse of an array:
+##4 ways: 
+(1)creating a temporary array
+class Main{
+    public static void main(String[] args){
+        int[] nums = new int[]{1,2,3,4,5};
+        int n = nums.length;
+        int[] temp = new int[n];
+        for(int i=0;i<n;i++)
+        {
+            temp[i] = nums[n-i-1];
+        }
+        for(int i=0;i<5;i++)
+        {
+            System.out.print(temp[i]+" ");
+        }
+    }
+}
+
+(2)using two pointers
+class GfG {
+    
+    // function to reverse an array
+    static void reverseArray(int[] arr) {
+        
+        // Initialize left to the beginning and right to the end
+        int left = 0, right = arr.length - 1;
+
+        // Iterate till left is less than right
+        while (left < right) {
+            
+            // Swap the elements at left and right position
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+            // Increment the left pointer
+            left++;
+
+            // Decrement the right pointer
+            right--;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 3, 4, 5, 6 };
+
+        reverseArray(arr);
+
+        for (int i = 0; i < arr.length; i++) 
+            System.out.print(arr[i] + " ");
+    }
+}
+
+(3)using swapping but iterating only through half of array
+class Main {
+    
+    // function to reverse an array
+    static void reverseArray(int[] arr) {
+        int n = arr.length;
+        for(int i=0;i<n/2;i++){
+            int temp = arr[i];
+            arr[i]=arr[n-i-1];
+            arr[n-i-1]=temp;
+        }
+        }
+    
+
+    public static void main(String[] args) {
+        int[] arr = { 1,2,3,4,5,6 };
+
+        reverseArray(arr);
+
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+    }
+}
+}
+
+(4) Recursive function using left and right pointer
+import java.util.Arrays;
+
+class Main{
+    
+    // recursive function to reverse an array from l to r
+    static void reverseArrayRec(int[] arr, int l, int r) {
+        if (l >= r)
+            return;
+  
+        // Swap the elements at the ends
+        int temp = arr[l];
+        arr[l] = arr[r];
+        arr[r] = temp;
+  
+        // Recur for the remaining array
+        reverseArrayRec(arr, l + 1, r - 1);
+    }
+
+    //MAIN FUNCTION
+    public static void main(String[] args) {
+        int[] arr = { 1, 2,3,4,5,6};
+        int n = arr.length;
+        reverseArrayRec(arr,0,n-1);
+  
+        for (int i = 0; i < arr.length; i++) 
+            System.out.print(arr[i] + " ");
+    }
+}
+
+##Sum of first digit and last digit
+class Solution
+{
+    public int corner_digitSum(int n)
+    {
+        
+        return((n<10) ? n:(n%10)+Integer.parseInt(Integer.toString(n).substring(0,1)));
+    }
+}
