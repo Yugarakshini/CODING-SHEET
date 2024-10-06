@@ -202,3 +202,5 @@ public static int firstDigit(int n)
         // return the last digit 
         return (n % 10); 
     } 
+
+##calculate power: https://www.geeksforgeeks.org/write-a-c-program-to-calculate-powxn/
