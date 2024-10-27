@@ -1,0 +1,6 @@
+class Solution {
+    static int getLastDigit(String a, String b) {
+        // code here
+        return new BigInteger(a).modPow(new BigInteger(b),BigInteger.TEN).intValue();
+    }
+};
