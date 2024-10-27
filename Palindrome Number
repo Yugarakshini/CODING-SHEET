@@ -1,0 +1,21 @@
+class Solution
+{
+    public String is_palindrome(int n)
+    {
+        Stack<Character> st = new Stack<>();
+        String text1 = n+"";
+        for(char c:text1.toCharArray())
+        {
+            st.push(c);
+        }
+        String text2 = "";
+        while(!st.isEmpty()){
+            text2+=st.pop();
+        }
+        if(text1.equals(text2)){
+            return "Yes";
+        }else{
+            return "No";
+        }
+    }
+}
