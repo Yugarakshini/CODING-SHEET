@@ -1,0 +1,9 @@
+class Solution {
+    public static int gcd(int a , int b) { 
+        //Check if B is 0, if true, return A as greatest common divisor.
+        if (b == 0) 
+	        return a; 
+	    //Recursively call the gcd function with B as the new A and A % B as the new B.
+        return gcd(b, a % b) ;  
+    } 
+}
