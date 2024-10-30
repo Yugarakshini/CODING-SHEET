@@ -1,0 +1,21 @@
+class Compute {
+    public String isSubset( long a1[], long a2[], long n, long m) {
+        // Iterate over each element in the second array
+        for (int i = 0; i < n; i++) {
+            boolean found = false;
+            // Check if the element exists in the first array
+            for (int j = 0; j < m; j++) {
+                if (a2[i] == a1[j]) {
+                    found = true;
+                    break;
+                }
+            }
+            // If any element is not found, return false
+            if (!found) return false;
+        }
+        // If all elements are found, return true
+        return true;
+    }
+}
+        
+    
